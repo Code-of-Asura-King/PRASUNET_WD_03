@@ -18,9 +18,8 @@ function App() {
   const [weather, setWeather] = useState({});
 
 
+  const search = (city) => { 
 
-
-  const search = (city) => {
     axios
       .get(
         `${apiKeys.base}?key=${apiKeys.key}&q=${city != "[object Object]" ? city : query
